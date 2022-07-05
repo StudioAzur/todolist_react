@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import Todo from "../Todo/Todo";
 
-function TodoList() {
+const TodoList = ({tasks}) => {
   return (
-    <div>TodoList</div>
-  )
-}
+    <>
+      <p>il reste {tasks.length} tâches à faire</p>
+      <ul>
+        {tasks.map((task) => {
+          return <Todo key={task.titre} task={task} />;
+        })}
+      </ul>
+    </>
+  );
+};
 
-export default TodoList
+export default TodoList;

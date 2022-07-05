@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function Todo() {
+function Todo({task}) {
   return (
-    <div>Todo</div>
-  )
+    <li>
+      {task.titre} {task.isDone ? "✔" : "❌"}
+    </li>
+  );
 }
 
-export default Todo
+export default Todo;
